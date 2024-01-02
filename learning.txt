@@ -1,0 +1,58 @@
+what is cors and what is it used for  
+
+CORS or "Cross-Origin Resource Sharing" refers to the situations when a frontend running in a browser has JavaScript code that communicates with a backend, and the backend is in a different "origin" than the frontend.
+
+
+An origin is the combination of protocol (http, https), domain (myapp.com, localhost, localhost.tiangolo.com), and port (80, 443, 8080).
+
+So, all these are different origins:
+
+http://localhost
+https://localhost
+http://localhost:8080
+Even if they are all in localhost, they use different protocols or ports, so, they are different "origins".
+
+So, let's say you have a frontend running in your browser at http://localhost:8080, and its JavaScript is trying to communicate with a backend running at http://localhost (because we don't specify a port, the browser will assume the default port 80).
+
+Then, the browser will send an HTTP OPTIONS request to the backend, and if the backend sends the appropriate headers authorizing the communication from this different origin (http://localhost:8080) then the browser will let the JavaScript in the frontend send its request to the backend.
+
+To achieve this, the backend must have a list of "allowed origins".
+
+In this case, it would have to include http://localhost:8080 for the frontend to work correctly.
+
+setting credentials to true allows cookies and http authentication schemes and certificates to be sent with Cross
+origin request.
+
+react toast is used to make notification easily in the application 
+
+we use context while we are dealing with smaller application while we use store when we are dealing with bigger applications 
+that are more complex and require more state managment then we go for react redux 
+
+if we set something as disabled={somecondition} like in a button then 
+when the value is true of that condition that button will be disabled 
+and as soon as that value becomes false the element would be enabled for 
+example while the website is loading button can be kept as disabled={loading} so
+while the website is loading the value of loading will be true and the button will be  
+disabled and as soon as the website is loaded the value of loading will be false and 
+then the button will be enabled and the user can then click the button as well.
+
+
+using cors and setting withCredentials in axios as true and what is its use ->
+The property only applies when making requests to a different origin.
+Responses from a different domain cannot set cookie values for their own domain unless withCredentials is set to true when making the request.
+In other words, when the withCredentials property is set to true, axios sends cookies and other credentials automatically.
+The cookies honor the same-origin policy and are not accessible through document.cookie or from the response headers.
+When the withCredentials setting is set to true, the Access-Control-Allow-Origin header cannot be set to a wildcard *.
+Instead, the header has to be set to one or more, specific domains.
+
+Note also that Link is a React component and as such it must be rendered into the DOM as part of the return from a React component, whereas the navigate function is a function and can be used in callbacks.
+
+
+hosting backend on https://render.com/ 
+
+first created a github repo and copied all the code their
+remove the node modules and also the config file and then put all the code over their on github 
+not hosting the website 
+
+
+the website re renders when we are using react js use selector hook if the value that the use selector is refering to changes. 
